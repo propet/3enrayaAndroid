@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AlertDialog.AppCompat"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_gravity="center"
+        android:layout_margin="40dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="JUEGA"
+            android:id="@+id/button3"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onJugar"
+            android:nestedScrollingEnabled="false"
+            android:textSize="40dp"
+            android:layout_weight="2"
+            android:layout_margin="20dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="COMPITE"
+            android:id="@+id/button4"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onCompetir"
+            android:textSize="40dp"
+            android:layout_weight="2"
+            android:layout_margin="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

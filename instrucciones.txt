@@ -1,0 +1,19 @@
+INSTRUCCIONES DEL TRES EN RAYA ONLINE
+
+% Nombre de la actividad principal del programa: Main2Activity.java
+
+1. Al iniciar la aplicacion entramos en la pantalla principal donde podremos elegir si jugar de forma inmediata como un usuario anónimo sin registrar, o competir como jugadores registrados para poder llevar una cuenta de nuestra puntuación en el juego.
+ Si elegimos la opcion jugar, pasamos directamente a buscar un rival con el que jugar. Si queremos competir, tendremos antes que registrarnos como un nuevo usuario, o logearnos si ya nos hemos creado un jugador.
+
+2. Tanto si jugamos como usuarios registrados o no, al final pasaremos igualmente a buscar partidas con otros jugadores, por lo que es IMPORTANTE estar seguro de que hay al menos dos moviles buscando partida en ese mismo momento.  
+
+3. Una vez dentro de la partida, tenemos el tres en raya donde marcaremos nuestras fichas en nuestros turnos, y una pequeña barra de chat donde podemos comentar la partida con nuestro oponente.
+
+4. En función de nuestro resultado en la partida tendremos pantallas de victoria, derrota o empate. Si hemos estado jugando como un jugador registrado, este resultado se verá reflejado en nuestra puntuacion. Se dan 10 puntos por la victoria, y -10 por la derrota.
+
+5. Después de la partida, si queremos seguir jugando, solo tenemos que apretar el boton "Volver a jugar" y pasamos directamente a buscar partida otra vez sin necesidad de hacer nada más.
+
+
+Nota 1: Mientras se está en la partida, se debe procurar que no se bloquee el móvil, ya que si esto ocurre, los dos usuarios se desconectaran. Esto también ocurrirá si se sale de la aplicación, pulsando el botón de retroceder o de inicio en el móvil. 
+Nota 2: Se recomienda acordar con otra persona el momento en el que se va a jugar para tener una mayor facilidad a la hora de iniciar la partida. O tambien puedes probarla tu mismo con dos moviles, o un movil y un emulador, o varios moviles y/o varios emuladores...
+Nota 3: La aplicacion puede no funcionar de noche porque el ordenador que hace de servidor este apagado.

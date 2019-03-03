@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TresEnRayaMulti</string>
+    <string name="titulo">Tres en Raya</string>
+    <string name="title_activity_activity_victoria">ActivityVictoria</string>
+    <string name="title_activity_activity_derrota">ActivityDerrota</string>
+    <string name="title_activity_activity_empate">activity_empate</string>
+    <string name="volver_a_jugar">Vuelve a jugar!</string>
+    <string name="MiBoton"> </string>
+    <string name="tu_nueva_puntuacion">Tu nueva puntuacion es de</string>
+    <string name="tu_puntuacion">Tu puntuacion es de</string>
+    // Botones sin texto para el tres en raya
+
+</resources>
