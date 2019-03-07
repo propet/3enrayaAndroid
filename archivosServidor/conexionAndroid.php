@@ -9,7 +9,7 @@ catch(PDOException $e){
 }
 
 $nombre = $_POST["nombre"];
-$consulta = "SELECT * FROM clientes WHERE nombre = :nombre";
+$consulta = "SELECT * FROM usuario WHERE nombre = :nombre";
 $resultadoConsulta=$gd->prepare($consulta);
 $resultadoConsulta->execute(":nombre" => $nombre);
 echo "id_cliente<

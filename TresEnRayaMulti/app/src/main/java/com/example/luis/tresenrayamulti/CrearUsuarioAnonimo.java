@@ -42,7 +42,7 @@ public class CrearUsuarioAnonimo extends AsyncTask<String, String, String> {
         // Datos de la conexion
         try {
             // Actualizacion de mi estatus como usuario conectado o a punto de desconectarse
-            URL url = new URL("http://www.eventosforthepeople.dynu.com/CrearUsuarioAnonimo.php");
+            URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/CrearUsuarioAnonimo.php");
             con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST"); //utilizacion del metodo POST
             con.setDoInput(true);

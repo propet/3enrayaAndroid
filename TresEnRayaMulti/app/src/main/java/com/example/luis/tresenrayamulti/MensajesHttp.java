@@ -45,7 +45,7 @@ public class MensajesHttp extends AsyncTask<String, String, String> {
         // Datos de la conexion
         try {
             // Actualizacion de mi estatus como usuario conectado o a punto de desconectarse
-            URL url = new URL("http://www.eventosforthepeople.dynu.com/AndroidServidorMensaje.php");
+            URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/AndroidServidorMensaje.php");
             con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST"); //utilizacion del metodo POST
             con.setDoInput(true);

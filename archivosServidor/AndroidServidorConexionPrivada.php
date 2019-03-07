@@ -42,7 +42,7 @@ if($conectado == 1){
     
 
 
-    Eleccion del rival por su nombre
+    // Eleccion del rival por su nombre
     $consulta3 = "SELECT id_usuario,nombre,conectado from usuario WHERE nombre = :nombre_usuario_rival";
     $resultadoConsulta = $gd->prepare($consulta3);
     $resultadoConsulta->execute(array(":nombre_usuario_rival"=>$nombre_usuario_rival));

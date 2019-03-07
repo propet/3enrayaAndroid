@@ -18,7 +18,7 @@ $pass = $_POST['pass'];
     
 
 // Insercion del nuevo usuario con este nombre en la base de datos
-$consulta = "INSERT INTO usuario (id_usuario,nombre,pass,ELO,conectado) VALUES (NULL,:nombre,:pass,0,0)";
+$consulta = "INSERT INTO usuario (nombre,pass,ELO,conectado) VALUES (:nombre,:pass,0,0)";
 $resultadoConsulta = $gd->prepare($consulta);
 $resultadoConsulta->execute(array(":nombre"=>$nombre,":pass"=>$pass));
 

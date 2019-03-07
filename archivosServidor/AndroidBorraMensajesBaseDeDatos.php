@@ -8,13 +8,30 @@ catch(PDOException $e){
 }
 
 
-$nombre_autor = $_POST['nombre'];
-$nombre_escuchante = $_POST['nombre_rival'];
+$nombre = $_POST['nombre'];
+$nombre_rival = $_POST['nombre_rival'];
+
+// id_usuario1
+$consulta = "SELECT id_usuario FROM usuario WHERE nombre = :nombre";
+$resultadoConsulta = $gd->prepare($consulta);
+$resultadoConsulta->execute(array(":nombre"=>$nombre));
+foreach($resultadoConsulta as $valor){
+  $id_usuario1 = $valor[0];
+}
+
+// id_usuario2
+$consulta = "SELECT id_usuario FROM usuario WHERE nombre = :nombre_rival";
+$resultadoConsulta = $gd->prepare($consulta);
+$resultadoConsulta->execute(array(":nombre_rival"=>$nombre_rival));
+foreach($resultadoConsulta as $valor){
+  $id_usuario2 = $valor[0];
+}
+
 
 // Eliminar los mensajes de la partida
-$consulta = "DELETE FROM mensaje WHERE ((nombre_autor = :nombre_autor AND nombre_escuchante = :nombre_escuchante) OR (nombre_autor = :nombre_escuchante AND nombre_escuchante = :nombre_autor))"; 
+$consulta = "DELETE FROM mensaje WHERE ((id_usuario1 = :id_usuario1 AND id_usuario2 = :id_usuario2) OR (id_usuario1 = :id_usuario2 AND id_usuario2 = :id_usuario1))"; 
 $resultadoConsulta = $gd->prepare($consulta);
-$resultadoConsulta->execute(array(":nombre_autor"=>$nombre_autor,":nombre_escuchante"=>$nombre_escuchante));
+$resultadoConsulta->execute(array(":id_usuario1"=>$id_usuario1,":id_usuario2"=>$id_usuario2));
 
 echo "Eliminacion de mensajes completada";
 

@@ -32,20 +32,6 @@ $nombre = $_POST['nombre'];
     if($conectado != 0){
         echo "Conectado con: \n"; 
         echo "$nombre_usuario_rival \n";
-
-    // HOTFIX BUG: NO SE PUEDE JUGAR COMO USUARIO ANONIMO!! LES HAGO NOTAR A LOS JUGADORES QUE ESTO 
-    // ES ASI POR UN BUG, Y SE LO DIGO POR EL CHAT DEL JUEGO.!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // INSERCION DEL COMENTARIO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $mensaje_bug = 'OPCION JUGAR DESHABILITADA POR UN BUG DE ULTIMA HORA.Perdonadnos la vida XD';
-    $consulta = "INSERT INTO mensaje (id_mensaje,nombre_autor,nombre_escuchante,mensaje) VALUES
-                    (NULL,:nombre,:nombre_usuario_rival,:mensaje_bug) WHERE
-                    ((nombre_autor = :nombre AND nombre_escuchante = :nombre_usuario_rival) OR
-                    (nombre_autor = :nombre_usuario_rival AND nombre_escuchante = :nombre))";
-    $resultadoConsulta = $gd->prepare($consulta);
-    $resultadoConsulta->execute(array(":nombre"=>$nombre,"nombre_usuario_rival"=>$nombre_usuario_rival,
-                                        ":mensaje_bug"=>$mensaje_bug));
-
-        break;
     }
     else{
         echo "Ups";

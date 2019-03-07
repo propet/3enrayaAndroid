@@ -49,7 +49,7 @@ public class EscuchaMensajesHttp extends AsyncTask<String, String, String> {
         // Datos de la conexion
         try {
             // Actualizacion de mi estatus como usuario conectado o a punto de desconectarse
-            URL url = new URL("http://www.eventosforthepeople.dynu.com/AndroidServidorEscucha.php");
+            URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/AndroidServidorEscucha.php");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST"); //utilizacion del metodo POST
             con.setDoInput(true);
@@ -73,6 +73,8 @@ public class EscuchaMensajesHttp extends AsyncTask<String, String, String> {
             result = in.readLine(); // obtiene el mensaje
             nombre_autor = in.readLine(); // obtiene el nombre del autor del mensaje
             id_mensaje1 = in.readLine(); // id del comentario para comprobar que no es el mismo
+
+            Log.d("EscuchaMensaje", result + nombre_autor + id_mensaje1);
 
             // No envio el resultado de mi consulta si el mensaje es nulo o esta repetido:
             // Compruebo si el mensaje que he recibido es nulo

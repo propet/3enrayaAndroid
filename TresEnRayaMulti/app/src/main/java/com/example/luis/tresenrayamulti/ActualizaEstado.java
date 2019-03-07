@@ -59,7 +59,7 @@ public class ActualizaEstado extends AsyncTask<String, String, String> {
         // Datos de la conexion
         try {
             // Actualizacion de mi estatus como usuario conectado o a punto de desconectarse
-            URL url = new URL("http://www.eventosforthepeople.dynu.com/AndroidServidorActualizaEstado.php");
+            URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/AndroidServidorActualizaEstado.php");
             con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST"); //utilizacion del metodo POST
             con.setDoInput(true);

@@ -35,7 +35,7 @@ $nombre = $nombre."_".$ultima_id;
 echo "$nombre\n";
 
 // Insercion del nuevo usuario con este nombre en la base de datos
-$consulta = "INSERT INTO usuario (id_usuario,nombre,ELO,conectado) VALUES (NULL,:nombre,0,0)";
+$consulta = "INSERT INTO usuario (nombre,ELO,conectado) VALUES (:nombre,0,0)";
 $resultadoConsulta = $gd->prepare($consulta);
 $resultadoConsulta->execute(array(":nombre"=>$nombre));
 

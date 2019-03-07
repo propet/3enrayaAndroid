@@ -47,11 +47,10 @@ public class RegistraUsuario extends AsyncTask<String, String, String> {
         result = "Failure";
 
         Log.d("Registar Usuario", "Try to send messages to server");
-
-        // Datos de la conexion
+        // Datos de la conexionman
         try {
             // Actualizacion de mi estatus como usuario conectado o a punto de desconectarse
-            URL url = new URL("http://www.eventosforthepeople.dynu.com/RegistrarUsuario.php");
+            URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/RegistrarUsuario.php");
             con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST"); //utilizacion del metodo POST
             con.setDoInput(true);

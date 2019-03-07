@@ -59,7 +59,7 @@ public class ConexionHttp extends AsyncTask<String, String, String> {
                 break;
             }
             try {
-                URL url = new URL("http://www.eventosforthepeople.dynu.com/AndroidServidorConexion.php");
+                URL url = new URL("http://www.luisdaranda.dynu.com/archivosServidor/AndroidServidorConexion.php");
                 con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("POST"); //utilizacion del metodo POST
                 con.setDoInput(true);
